@@ -37,10 +37,18 @@ input.combustivel.forEach((radio) => {
 
 elemento.formulario.addEventListener("submit", (evento) => {
   evento.preventDefault();
+  calcularConsumo();
+});
+
+function calcularConsumo() {
   viagem.duracao = input.duracao.value;
   viagem.velocidademedia = input.velocidade.value;
-  console.log(viagem.duracao, viagem.velocidademedia)
-});
+
+  let hora = viagem.duracao.slice(0,2)
+  let minuto = viagem.duracao.slice(3)
+
+  console.log(hora, minuto);
+}
 
 viagem.percurso = viagem.duracao * viagem.velocidademedia;
 
