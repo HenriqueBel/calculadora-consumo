@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 50dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.combustivel {
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+}
+
+.caixa-principal {
+  background-color: aquamarine;
+  height: 700px;
+  width: 400px;
+  gap: 25px;
+  display: flex;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 25px;
+}
+
+form input {
+  width: 350px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.caixa-menor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.resultado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 560px;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.botao {
+  display: flex;
+  justify-content: center;
+}
