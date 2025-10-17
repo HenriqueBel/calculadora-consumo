@@ -5,7 +5,7 @@
 }
 
 body {
-  min-height: 50dvh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,8 +19,7 @@ body {
 
 .caixa-principal {
   background-color: aquamarine;
-  height: 700px;
-  width: 400px;
+  height: 850px;
   gap: 25px;
   display: flex;
   border-radius: 25px;
@@ -32,6 +31,8 @@ form {
   gap: 50px;
   margin-top: 25px;
   border-radius: 30px;
+  padding: 50px;
+  height: 700px;
 }
 
 form input {
@@ -53,7 +54,8 @@ form input {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: 560px;
+  margin-top: 638px;
+  width: 261px;
 }
 
 button {
