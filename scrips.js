@@ -3,6 +3,7 @@ const input = {
   consumo: document.querySelector("#consumo"),
   velocidade: document.querySelector("#velocidade"),
   duracao: document.querySelector("#duracao"),
+  valor: document.querySelector("#valor-combustivel")
 };
 
 const elemento = {
@@ -20,7 +21,7 @@ const viagem = {
 
 const veiculo = {
   modelo: "",
-  consumoMedio: 14,
+  consumoMedio: "",
 };
 
 const combustivel = {

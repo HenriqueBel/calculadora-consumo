@@ -8,7 +8,7 @@
     <title>Calculadora de Consumo</title>
   </head>
   <body>
-    <div class="caixa-principal">
+   
       <form action="">
         <p>Tipo de Combustivel</p>
         <section>
@@ -34,14 +34,18 @@
               value="gasolina"
             />
             <label for="gasolina">Gasolina</label>
-          </div>
+       
 
         </section>
+
+        <label for="preco de combustivel">Digito o Valor do Combustível Aqui</label>
+        <input placeholder="Valor do Combustível" type="number" id="valor-combustivel">
+
         <label for="consumo">Digite o consumo do veículo (KM/L):</label>
-        <input required type="number" id="consumo" />
+        <input placeholder="Consumo do Veículo (KM/L)" required type="number" id="consumo" />
 
         <label for="velocidade">Digite a velocidade média (KM/h):</label>
-        <input required type="number" id="velocidade" />
+        <input placeholder="Velocidade Média da Viagem" required type="number" id="velocidade" />
 
         <label for="duracao">selecione o tempo total da viagem:</label>
         <input required type="time" id="duracao" />
