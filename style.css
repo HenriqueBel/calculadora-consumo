@@ -36,13 +36,7 @@ form input {
   text-align: center;
 }
 
-.caixa-menor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-}
+
 
 .resultado {
   display: flex;
