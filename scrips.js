@@ -3,7 +3,7 @@ const input = {
   consumo: document.querySelector("#consumo"),
   velocidade: document.querySelector("#velocidade"),
   duracao: document.querySelector("#duracao"),
-  valor: document.querySelector("#valor-combustivel")
+  valorCombustivel: document.querySelector("#valorCombustivel")
 };
 
 const elemento = {
@@ -26,8 +26,7 @@ const veiculo = {
 
 const combustivel = {
   tipo: "",
-  precoEtanol: 3.899,
-  precoGasolina: 5.999,
+  preco_combustivel: ""
 };
 
 input.combustivel.forEach((radio) => {
@@ -42,6 +41,7 @@ elemento.formulario.addEventListener("submit", (evento) => {
 });
 
 function calcularConsumo() {
+
   //VARIAVEIS PARA CAPTURAR O VALOR DA HORA E MINUTO
   viagem.duracao = input.duracao.value;
   viagem.velocidademedia = input.velocidade.value;
@@ -56,11 +56,8 @@ function calcularConsumo() {
   // FÓRMULA PARA CALCULAR A DISTANCIA PERCORRIDA PELO USUARIO
 
   if (combustivel.tipo.toLowerCase === "etanol") {
-    viagem.percurso =( viagem.percurso - (viagem.percurso * 0, 3) * 100)
-    
+    viagem.percurso = (viagem.percurso - (viagem.percurso * 0, 3) * 100)
   }
-
-console.log( viagem.percurso);
 
   viagem.percurso = (
     viagem.velocidademedia *
@@ -76,34 +73,34 @@ console.log( viagem.percurso);
 
   //CALCULO PARA SABER O CUSTO EM REAIS (R$) DE ACORDO COM O CONSUMO EM LITROS
 
-  if (combustivel.tipo.toLocaleLowerCase() === "etanol") {
-    viagem.custoEmReais = viagem.consumoLitros * combustivel.precoEtanol;
+  combustivel.preco_combustivel = +input.valorCombustivel.value
 
-    paragrafo.innerText = `Custo do Consumo em Reais: ${viagem.custoEmReais.toLocaleString(
-      "pt-BR",
-      {
-        style: "currency",
-        currency: "BRL",
-      }
-    )}  Percorreu: ${viagem.percurso.replace(
-      ".",
-      ","
-    )} KM e abasteceu ${viagem.consumoLitros.toFixed(2)} Litros`;
+  viagem.custoEmReais = viagem.consumoLitros * combustivel.preco_combustivel;
 
-    //METODO PARA FORMATAR COMO MOEDA(R$)
-  } else {
-    viagem.custoEmReais = viagem.consumoLitros * combustivel.precoGasolina;
+  paragrafo.innerText = `Custo do Consumo em Reais: ${viagem.custoEmReais.toLocaleString(
+    "pt-BR",
+    {
+      style: "currency",
+      currency: "BRL",
+    }
+  )}  Percorreu: ${viagem.percurso.replace(
+    ".",
+    ","
+  )} KM e abasteceu ${viagem.consumoLitros.toFixed(1).replace(".", ",")} Litros`;
 
-    //METODO PARA FORMATAR COMO MOEDA(R$)
-    paragrafo.innerText = `Custo da Gasolina: ${viagem.custoEmReais.toLocaleString(
-      "pt-BR",
-      {
-        style: "currency",
-        currency: "BRL",
-      }
-    )} Percorreu: ${viagem.percurso.replace(
-      ".",
-      ","
-    )} KM e abasteceu ${viagem.consumoLitros.toFixed(2)} Litros`;
-  }
+  //METODO PARA FORMATAR COMO MOEDA(R$)
+
+
+  //METODO PARA FORMATAR COMO MOEDA(R$)
+  paragrafo.innerText = `Custo da Gasolina: ${viagem.custoEmReais.toLocaleString(
+    "pt-BR",
+    {
+      style: "currency",
+      currency: "BRL",
+    }
+  )} Percorreu: ${viagem.percurso.replace(
+    ".",
+    ","
+  )} KM e abasteceu ${viagem.consumoLitros.toFixed(1).replace(".", ",")} Litros`;
 }
+

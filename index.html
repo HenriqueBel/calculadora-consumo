@@ -1,62 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="./scrips.js" defer></script>
-    <title>Calculadora de Consumo</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="./scrips.js" defer></script>
+  <title>Calculadora de Consumo</title>
+</head>
+
+<body>
+
+  <form action="">
+    <p>Tipo de Combustivel</p>
+    <section>
+      <div class="combustivel">
+        <input required type="radio" name="combustivel" class="inputCombustivel" id="etanol" value="etanol" />
+        <section class="radio">
+          <label for="etanol">Etanol</label>
+      </div>
+      <div class="combustivel">
+        <input required type="radio" name="combustivel" class="inputCombustivel" id="gasolina" value="gasolina" />
+        <label for="gasolina">Gasolina</label>
+
+
+    </section>
+
+    <label for="preco de combustivel">Digito o Valor do Combustível Aqui</label>
+    <input placeholder="Valor do Combustível" required type="number" step="0.01" id="valorCombustivel">
+
+    <label for="consumo">Digite o consumo do veículo (KM/L):</label>
+    <input placeholder="Consumo do Veículo (KM/L)" required type="number"  id="consumo" />
+
+    <label for="velocidade">Digite a velocidade média (KM/h):</label>
+    <input placeholder="Velocidade Média da Viagem" required type="number" id="velocidade" />
+
+    <label for="duracao">selecione o tempo total da viagem:</label>
+    <input required type="time" id="duracao" />
    
-      <form action="">
-        <p>Tipo de Combustivel</p>
-        <section>
-          <div class="combustivel">
-            <input
-              required
-              type="radio"
-              name="combustivel"
-              class="inputCombustivel"
-              id="etanol"
-              value="etanol"
-            />
-            <section class="radio">
-            <label for="etanol">Etanol</label>
-          </div>
-          <div class="combustivel">
-            <input
-              required
-              type="radio"
-              name="combustivel"
-              class="inputCombustivel"
-              id="gasolina"
-              value="gasolina"
-            />
-            <label for="gasolina">Gasolina</label>
-       
 
-        </section>
+    <div class="botao">
+      <button type="submit">CALCULAR</button>
+    </div>
+  </form>
 
-        <label for="preco de combustivel">Digito o Valor do Combustível Aqui</label>
-        <input placeholder="Valor do Combustível" type="number" id="valor-combustivel">
 
-        <label for="consumo">Digite o consumo do veículo (KM/L):</label>
-        <input placeholder="Consumo do Veículo (KM/L)" required type="number" id="consumo" />
+  <p class="resultado">0</p>
+</body>
 
-        <label for="velocidade">Digite a velocidade média (KM/h):</label>
-        <input placeholder="Velocidade Média da Viagem" required type="number" id="velocidade" />
-
-        <label for="duracao">selecione o tempo total da viagem:</label>
-        <input required type="time" id="duracao" />
-        </section>
-
-        <div class="botao">
-          <button type="submit">CALCULAR</button>
-        </div>
-      </form>
-    
-
-    <p class="resultado">0</p>
-  </body>
 </html>
